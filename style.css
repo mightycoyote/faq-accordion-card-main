@@ -1,16 +1,146 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  /* html, body {
+    height: 100%;
+  } */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+/* 
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+#### Text
+
+- Very dark desaturated blue: hsl(238, 29%, 16%)
+- Soft red: hsl(14, 88%, 65%)
+
+
+### Neutral
+
+#### Text
+
+- Very dark grayish blue: hsl(237, 12%, 33%)
+- Dark grayish blue: hsl(240, 6%, 50%)
+
+#### Dividers
+
+- Light grayish blue: hsl(240, 5%, 91%) */
+
+
+
+body {
+  font-size: .75rem;
+  font-family: 'Kumbh Sans', sans-serif;
+  --main-text: hsl(238, 29%, 16%);
+  --active-text: hsl(14, 88%, 65%);
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.wrapper {
+  background-color: white;  
+  padding: 1rem;
+  margin: 240px 24px 24px 24px;
+  border-radius: 20px;
+}
+
+.img-wrap {
+  background: no-repeat center bottom url(./images/bg-pattern-mobile.svg);
+  width: 275px;
+  margin: 0 auto;
+  position: relative;
+  top: -125px;
+}
+
+.graphic {
+  position: relative;
+  top: -24px;
+}
+
+.faqs-block {
+  margin-top: -100px;
+}
+
+h1 {
+  text-align: center;
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+details {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  padding: 1rem;
+}
+
+details > summary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+details > summary::after {
+  content: url(./images/icon-arrow-down.svg);
+  transition: transform .1s;
+}
+
+details[open] > summary {
+  font-weight: bold;
+}
+
+details[open] > summary::after {
+  content: url(./images/icon-arrow-down.svg);
+  transform: rotate(180deg);
+}
 
 
 
 
 
-<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+
+
+
+/* Feel free to remove these styles or customise in your own stylesheet 👍 */
   
 .attribution {
-    font-size: 11px;
-    text-align: center;
+  font-size: 11px;
+  text-align: center;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
   
