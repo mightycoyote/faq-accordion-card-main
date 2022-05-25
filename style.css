@@ -60,38 +60,47 @@ The designs were created to the following widths:
 
 - Light grayish blue: hsl(240, 5%, 91%) */
 
-
+html {
+  --v-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --v-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  --light-grayish-blue: hsl(240, 5%, 91%);
+  --breakpoint: 700px;
+}
 
 body {
   font-size: .75rem;
   font-family: 'Kumbh Sans', sans-serif;
-  --main-text: hsl(238, 29%, 16%);
-  --active-text: hsl(14, 88%, 65%);
+  color: var(--v-dark-desaturated-blue);
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  display: grid;
+  grid-template-rows: auto 10vh;
 }
 
 .wrapper {
   background-color: white;  
   padding: 1rem;
-  margin: 240px 24px 24px 24px;
+  margin: 180px 24px 24px 24px;
   border-radius: 20px;
 }
 
-.img-wrap {
+.img-wrap-mobile {
   background: no-repeat center bottom url(./images/bg-pattern-mobile.svg);
-  width: 275px;
+  width: 240px;
   margin: 0 auto;
   position: relative;
-  top: -125px;
+  top: -100px;
 }
 
 .graphic {
   position: relative;
-  top: -24px;
+  top: -30px;
 }
 
 .faqs-block {
-  margin-top: -100px;
+  margin-top: -90px;
+  margin-bottom: 30px;
 }
 
 h1 {
@@ -101,14 +110,16 @@ h1 {
 }
 
 details {
-  border-bottom: 1px solid hsl(240, 5%, 91%);
+  border-bottom: 1px solid var(--light-grayish-blue);
   padding: 1rem;
+  color: var(--dark-grayish-blue)
 }
 
 details > summary {
   list-style: none;
   display: flex;
   justify-content: space-between;
+  color: var(--v-dark-grayish-blue);
 }
 
 details > summary::after {
@@ -116,8 +127,13 @@ details > summary::after {
   transition: transform .1s;
 }
 
+details > summary:hover {
+  color: var(--soft-red);
+}
+
 details[open] > summary {
   font-weight: bold;
+  margin-bottom: .5rem;
 }
 
 details[open] > summary::after {
@@ -126,18 +142,12 @@ details[open] > summary::after {
 }
 
 
-
-
-
-
-
-
-
 /* Feel free to remove these styles or customise in your own stylesheet 👍 */
   
 .attribution {
   font-size: 11px;
   text-align: center;
+  align-self: center;
 }
 
 .attribution a {
