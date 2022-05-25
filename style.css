@@ -32,33 +32,18 @@
 
 /* 
 
-## Layout
-
 The designs were created to the following widths:
 
 - Mobile: 375px
 - Desktop: 1440px
 
-## Colors
+SVG of desktop bg pattern:
+svg width="966" height="945"
 
-### Primary
+SVG of desktop graphic
+svg width="472" height="359"
 
-#### Text
-
-- Very dark desaturated blue: hsl(238, 29%, 16%)
-- Soft red: hsl(14, 88%, 65%)
-
-
-### Neutral
-
-#### Text
-
-- Very dark grayish blue: hsl(237, 12%, 33%)
-- Dark grayish blue: hsl(240, 6%, 50%)
-
-#### Dividers
-
-- Light grayish blue: hsl(240, 5%, 91%) */
+*/
 
 html {
   --v-dark-desaturated-blue: hsl(238, 29%, 16%);
@@ -76,6 +61,8 @@ body {
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   display: grid;
   grid-template-rows: auto 10vh;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .wrapper {
@@ -93,7 +80,12 @@ body {
   top: -100px;
 }
 
-.graphic {
+.img-wrap-desktop {
+  background: no-repeat center bottom url(./images/bg-pattern-desktop.svg);
+  display: none;
+}
+
+.graphic-mobile {
   position: relative;
   top: -30px;
 }
@@ -139,6 +131,33 @@ details[open] > summary {
 details[open] > summary::after {
   content: url(./images/icon-arrow-down.svg);
   transform: rotate(180deg);
+}
+
+@media (min-width: 700px) {
+  .img-wrap-mobile {
+    display: none;
+  }
+  .img-wrap-desktop {
+    display: block;
+  }
+  .wrapper {
+    display: grid;
+    margin: 1.75rem;
+    grid-template-columns: 1fr 1fr;
+    align-self: center;
+  }
+  .faqs-block {
+    margin: 2rem;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    grid-template-rows: 90vh 10vh;
+  }
+  h1 {
+    text-align: left;
+  }
 }
 
 
