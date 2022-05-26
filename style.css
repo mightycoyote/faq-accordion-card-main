@@ -51,7 +51,7 @@ html {
   --v-dark-grayish-blue: hsl(237, 12%, 33%);
   --dark-grayish-blue: hsl(240, 6%, 50%);
   --light-grayish-blue: hsl(240, 5%, 91%);
-  --breakpoint: 700px;
+  --breakpoint: 44rem;
 }
 
 body {
@@ -67,12 +67,12 @@ body {
 
 .wrapper {
   background-color: white;  
-  padding: 1rem;
+  padding: 16px;
   margin: 180px 24px 24px 24px;
   border-radius: 20px;
 }
 
-.img-wrap-mobile {
+.graphic-wrap-mobile {
   background: no-repeat center bottom url(./images/bg-pattern-mobile.svg);
   width: 240px;
   margin: 0 auto;
@@ -80,8 +80,10 @@ body {
   top: -100px;
 }
 
-.img-wrap-desktop {
-  background: no-repeat center bottom url(./images/bg-pattern-desktop.svg);
+.graphic-wrap-desktop {
+  background: no-repeat url(./images/bg-pattern-desktop.svg);
+  background-size: contain;
+  background-position: -100px 100px;
   display: none;
 }
 
@@ -103,7 +105,7 @@ h1 {
 
 details {
   border-bottom: 1px solid var(--light-grayish-blue);
-  padding: 1rem;
+  padding: 16px;
   color: var(--dark-grayish-blue)
 }
 
@@ -125,7 +127,7 @@ details > summary:hover {
 
 details[open] > summary {
   font-weight: bold;
-  margin-bottom: .5rem;
+  margin-bottom: 8px;
 }
 
 details[open] > summary::after {
@@ -133,21 +135,21 @@ details[open] > summary::after {
   transform: rotate(180deg);
 }
 
-@media (min-width: 700px) {
-  .img-wrap-mobile {
+@media (min-width: 44rem) {
+  .graphic-wrap-mobile {
     display: none;
   }
-  .img-wrap-desktop {
+  .graphic-wrap-desktop {
     display: block;
   }
   .wrapper {
     display: grid;
-    margin: 1.75rem;
+    margin: 28px;
     grid-template-columns: 1fr 1fr;
     align-self: center;
   }
   .faqs-block {
-    margin: 2rem;
+    margin: 32px;
   }
   html {
     height: 100%;
@@ -164,7 +166,7 @@ details[open] > summary::after {
 /* Feel free to remove these styles or customise in your own stylesheet 👍 */
   
 .attribution {
-  font-size: 11px;
+  font-size: .75rem;
   text-align: center;
   align-self: center;
 }
