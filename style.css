@@ -37,11 +37,21 @@ The designs were created to the following widths:
 - Mobile: 375px
 - Desktop: 1440px
 
-SVG of desktop bg pattern:
-svg width="966" height="945"
+mobile bg original dimensions
+width="240" height="104"
 
-SVG of desktop graphic
-svg width="472" height="359"
+mobile illustration original dimensions
+none
+
+desktop bg pattern original dimensions:
+width="966" height="945"
+
+desktop illustration original dimensions:
+width="472" height="359"
+
+desktop orange box original dimensions
+width="191" height="184"
+
 
 */
 
@@ -68,32 +78,23 @@ body {
 .wrapper {
   background-color: white;  
   padding: 16px;
-  margin: 180px 24px 24px 24px;
+  margin: 24px 24px 24px 24px;
   border-radius: 20px;
+  display: grid;
+  grid-template-rows: auto min-content;
 }
 
 .graphic-wrap-mobile {
-  background: no-repeat center bottom url(./images/bg-pattern-mobile.svg);
-  width: 240px;
-  margin: 0 auto;
-  position: relative;
-  top: -100px;
+  max-width: 240px;
+  justify-self: center;
 }
 
 .graphic-wrap-desktop {
-  background: no-repeat url(./images/bg-pattern-desktop.svg);
-  background-size: contain;
-  background-position: -100px 100px;
   display: none;
 }
 
-.graphic-mobile {
-  position: relative;
-  top: -30px;
-}
-
 .faqs-block {
-  margin-top: -90px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
@@ -102,6 +103,8 @@ h1 {
   margin: 1rem;
   font-size: 2rem;
 }
+
+/* styles for the accordion */
 
 details {
   border-bottom: 1px solid var(--light-grayish-blue);
@@ -135,6 +138,8 @@ details[open] > summary::after {
   transform: rotate(180deg);
 }
 
+/* desktop styles  */
+
 @media (min-width: 44rem) {
   .graphic-wrap-mobile {
     display: none;
@@ -143,7 +148,6 @@ details[open] > summary::after {
     display: block;
   }
   .wrapper {
-    display: grid;
     margin: 28px;
     grid-template-columns: 1fr 1fr;
     align-self: center;
