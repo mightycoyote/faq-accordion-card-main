@@ -104,6 +104,12 @@ body {
   display: none;
 }
 
+.box-overlap {
+  position: absolute;
+  /* hide this for now while I'm working on base svgs */
+  display: none;
+}
+
 .faqs-block {
   margin-top: 30px;
 }
@@ -158,20 +164,20 @@ details[open] > summary::after {
     display: block;
   }
   .wrapper {
-    padding-top: 16px;
+    padding: 0;
     margin: 28px;
-    display: grid;
     grid-template-columns: 1fr 1fr;
     align-self: center;
   }
   .faqs-block {
-    margin: 32px;
+    margin: 62px 62px 62px 0px;
   }
   body {
     grid-template-rows: 90vh 10vh;
   }
   h1 {
     text-align: left;
+    margin-top: 0;
   }
 }
 
