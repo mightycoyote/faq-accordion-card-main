@@ -61,7 +61,6 @@ html {
   --v-dark-grayish-blue: hsl(237, 12%, 33%);
   --dark-grayish-blue: hsl(240, 6%, 50%);
   --light-grayish-blue: hsl(240, 5%, 91%);
-  --breakpoint: 46rem;
 }
 
 body {
@@ -72,7 +71,7 @@ body {
   display: grid;
   grid-template-rows: auto 10vh;
   min-width: 300px;
-  max-width: 800px;
+  max-width: 850px;
   margin: 0 auto;
 }
 
@@ -109,15 +108,11 @@ body {
   content: url(./images/illustration-box-desktop.svg);
   position: absolute;
   left: -92px;
-  top: 166px;
+  top: 210px;
 }
 
 #bg-pattern-desktop, #orange-box {
   overflow: visible;
-}
-
-#orange-box {
-  transform: translate(-10%, 20%);
 }
 
 .faqs-block {
@@ -166,7 +161,7 @@ details[open] > summary::after {
 
 /* desktop styles  */
 
-@media (min-width: 42rem) {
+@media (min-width: 50rem) {
   .graphic-wrap-mobile {
     display: none;
   }
@@ -178,9 +173,10 @@ details[open] > summary::after {
     margin: 28px;
     grid-template-columns: 1fr 1fr;
     align-self: center;
+    gap: 10px;
   }
   .faqs-block {
-    margin: 48px 62px 48px 0px;
+    margin: 48px 62px 48px 32px;
   }
   body {
     grid-template-rows: 90vh 10vh;
@@ -195,12 +191,13 @@ details[open] > summary::after {
 /* Feel free to remove these styles or customise in your own stylesheet 👍 */
   
 .attribution {
+  color: white;
   font-size: .75rem;
   text-align: center;
   align-self: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: white;
 }
   
