@@ -61,7 +61,7 @@ html {
   --v-dark-grayish-blue: hsl(237, 12%, 33%);
   --dark-grayish-blue: hsl(240, 6%, 50%);
   --light-grayish-blue: hsl(240, 5%, 91%);
-  --breakpoint: 44rem;
+  --breakpoint: 46rem;
 }
 
 body {
@@ -102,12 +102,22 @@ body {
 
 .graphic-wrap-desktop {
   display: none;
+  position: relative;
 }
 
-.box-overlap {
+.graphic-wrap-desktop::before {
+  content: url(./images/illustration-box-desktop.svg);
   position: absolute;
-  /* hide this for now while I'm working on base svgs */
-  display: none;
+  left: -92px;
+  top: 166px;
+}
+
+#bg-pattern-desktop, #orange-box {
+  overflow: visible;
+}
+
+#orange-box {
+  transform: translate(-10%, 20%);
 }
 
 .faqs-block {
@@ -170,7 +180,7 @@ details[open] > summary::after {
     align-self: center;
   }
   .faqs-block {
-    margin: 62px 62px 62px 0px;
+    margin: 48px 62px 48px 0px;
   }
   body {
     grid-template-rows: 90vh 10vh;
