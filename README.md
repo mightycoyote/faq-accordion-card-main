@@ -12,7 +12,6 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -39,21 +38,18 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Relative and absolute positioning
 - SVG witchcraft
 
 ### Useful resources
 
-- [Mimic Relative Positioning Inside an SVG with Nested SVGs](https://www.sarasoueidan.com/blog/mimic-relative-positioning-in-svg/) - I ended up nesting 2 of the 3 SVGs used on the desktop version of the component. This article helped me figure out how to do it (but also goes into a much more complex treatment of the topic).
-- [A Beginner's Guide to SVGs](https://youtu.be/ZJSCl6XEdP8) - SVGs were covered somewhat briefly in the web development curriculum I went through when I was first getting started, but it's a huge topic. This explainer series from Kevin Powell is really helpful.
+- [Mimic Relative Positioning Inside an SVG with Nested SVGs](https://www.sarasoueidan.com/blog/mimic-relative-positioning-in-svg/) - I ended up nesting 2 of the 3 SVGs used on the desktop version of the component. This article helped me figure out how to do it (but also includes a much more complex treatment of the topic than I got into).
+- [A Beginner's Guide to SVGs](https://youtu.be/ZJSCl6XEdP8) - SVGs were covered somewhat briefly in the web development curriculum I went through when I was first getting started. This explainer series from Kevin Powell is really helpful.
 
 ## Author
 
 - Website - [Sarah Wilkes](https://mightycoyote.github.io/)
 - Frontend Mentor - [@mightycoyote](https://www.frontendmentor.io/profile/mightycoyote)
 
-## Acknowledgments
-
-Every time I got really frustrated with figuring out how to place the SVGs, I told @thudfactor that I gave up this time, might need to go over it with him later if I had not thrown my computer out the window, and then immediately came up with the solution.
