@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Frontend Mentor Solution URL: [Accordion card using details tags, no JS](https://www.frontendmentor.io/solutions/accordion-card-using-details-tags-no-js-5iPqe4h1uN)
 - Live Site URL: [FAQ-Accordion-Card](https://mightycoyote.github.io/faq-accordion-card-main/)
 
 ## My process
